@@ -38,5 +38,13 @@ class Trade < ActiveRecord::Base
       end
       self.btc = self.usd /  price
     end
+    
+    # Account for fee
+    if self.trade_type == "buy"
+      self.btc = self.btc * 0.99
+    else
+      self.usd = self.usd * 0.99
+    end
+  
   end
 end

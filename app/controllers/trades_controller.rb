@@ -14,6 +14,15 @@ class TradesController < ApplicationController
   # GET /trades/1.json
   def show
     @trade = Trade.find(params[:id])
+    if @trade.trade_type == "buy"
+      fee = @trade.btc / 0.99 - @trade.btc
+      fee = fee.round(8)
+      @fee = "#{fee} BTC"
+    else 
+      fee = @trade.usd / 0.99 - @trade.usd
+      fee = fee.round(2)
+      @fee = "$#{fee} USD"
+    end
 
     respond_to do |format|
       format.html # show.html.erb

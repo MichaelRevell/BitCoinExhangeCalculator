@@ -1,5 +1,6 @@
-<p id="notice"><%= notice %></p>
-
+<center>
+<div class="trade-box result">
+<h2>Trade Calculation</h2>
 <p>
   <b>Trade type:</b>
   <%= @trade.trade_type %>
@@ -7,19 +8,22 @@
 
 <p>
   <b>Usd:</b>
-  <%= @trade.usd %>
+  <%= @trade.usd.round(2) %>
 </p>
 
 <p>
   <b>Btc:</b>
-  <%= @trade.btc %>
+  <%= @trade.btc.round(8) %>
 </p>
 
 <p>
   <b>Price:</b>
   <%= @trade.price %>
 </p>
-
-
-<%= link_to 'Edit', edit_trade_path(@trade) %> |
-<%= link_to 'Back', trades_path %>
+<p>
+  <b>Fee:</b>
+  <%= @fee%>
+</p>
+<p><a href="/">Make another Calculation</a></p>
+</div>
+</center>

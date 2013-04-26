@@ -12,15 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :trade_type %><br />
     <%= f.select :trade_type, options_for_select(["buy", "sell"]) %>
   </div>
   <div class="field">
-    <%= f.label :usd %><br />
+    <%= f.label :usd %>
     <%= f.text_field :usd %>
   </div>
   <div class="field">
-    <%= f.label :btc %><br />
+    <%= f.label :btc %>
     <%= f.text_field :btc %>
   </div>
   <div class="actions">
