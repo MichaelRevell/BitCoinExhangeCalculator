@@ -1,0 +1,29 @@
+<h1>Listing trades</h1>
+
+<table>
+  <tr>
+    <th>Trade type</th>
+    <th>Usd</th>
+    <th>Btc</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @trades.each do |trade| %>
+  <tr>
+    <td><%= trade.trade_type %></td>
+    <td><%= trade.usd %></td>
+    <td><%= trade.btc %></td>
+    <td><%= trade.price %></td>
+    <td><%= link_to 'Show', trade %></td>
+    <td><%= link_to 'Edit', edit_trade_path(trade) %></td>
+    <td><%= link_to 'Destroy', trade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Trade', new_trade_path %>

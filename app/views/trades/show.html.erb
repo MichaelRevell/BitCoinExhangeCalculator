@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Trade type:</b>
+  <%= @trade.trade_type %>
+</p>
+
+<p>
+  <b>Usd:</b>
+  <%= @trade.usd %>
+</p>
+
+<p>
+  <b>Btc:</b>
+  <%= @trade.btc %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @trade.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_trade_path(@trade) %> |
+<%= link_to 'Back', trades_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  trade_type: MyString
+  usd: 1.5
+  btc: 1.5
+
+two:
+  trade_type: MyString
+  usd: 1.5
+  btc: 1.5
